@@ -12,7 +12,6 @@ M.snippet_text = {
 function M.setup(opts)
 	opts = opts or {}
 
-	-- Register via LuaSnip
 	local ok, luasnip = pcall(require, "luasnip")
 	if ok then
 		luasnip.add_snippets("cpp", {
