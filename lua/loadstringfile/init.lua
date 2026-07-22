@@ -12,14 +12,7 @@ M.snippet_text = {
 function M.setup(opts)
 	opts = opts or {}
 
-	-- Method A: Register as a native Neovim snippet (Neovim 0.10+)
-	if vim.snippet then
-		vim.snippet.add("!loadstringfile", function()
-			return M.snippet_text
-		end, { trig = "!loadstringfile" })
-	end
-
-	-- Method B: Register via LuaSnip if it's installed
+	-- Register via LuaSnip
 	local ok, luasnip = pcall(require, "luasnip")
 	if ok then
 		luasnip.add_snippets("cpp", {
