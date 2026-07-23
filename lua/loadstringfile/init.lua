@@ -41,7 +41,7 @@ function M.setup(opts)
 			body = M.snippet_text,
 			description = "Insert read_file function",
 		}
-		vim.fn.writefile({ vim.json.encode(existing, { indent = true }) }, snippet_path)
+		vim.fn.writefile({ vim.fn.json_encode(existing) }, snippet_path)
 	end
 end
 
