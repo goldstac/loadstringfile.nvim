@@ -1,13 +1,26 @@
 # loadstringfile.nvim
 
-A lightweight Neovim plugin that adds an Emmet-style trigger (`!loadstringfile`) to instantly scaffold a C++ file-reading utility function.
+A lightweight Neovim plugin that adds a `!loadstringfile` snippet to scaffold a C++ file-reading utility function.
+
+```
+std::string read_file(const std::string& filepath) {
+    std::ifstream file(filepath);
+    std::stringstream buffer;
+    buffer << file.rdbuf();
+    return buffer.str();
+}
+```
 
 ## Installation
 
-Using [lazy.nvim]:
-
 ```lua
 {
-  "your-github-username/loadstringfile.nvim",
+  "goldstac/loadstringfile.nvim",
   ft = "cpp",
+  dependencies = { "L3MON4D3/LuaSnip" },
 }
+```
+
+## Usage
+
+Open a `.cpp` file, type `!loadstringfile`, and select it from the completion menu.
