@@ -28,3 +28,10 @@ Open a `.cpp` file, type `!loadstringfile`, and select it from the completion me
 Requires `#include <fstream>` and `#include <sstream>` at the top of your file.
 
 Place the cursor at file scope (outside any function) when expanding the snippet.
+
+## Issues & Suggestions
+
+Found a bug or have an idea? Open an [issue](https://github.com/goldstac/loadstringfile.nvim/issues).
+
+- Use the **enhancement** tag for feature requests.
+- Should the plugin auto-add `#include <fstream>` and `#include <sstream>`? Let us know in an enhancement issue!
