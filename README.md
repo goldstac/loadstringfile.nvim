@@ -24,3 +24,7 @@ std::string read_file(const std::string& filepath) {
 ## Usage
 
 Open a `.cpp` file, type `!loadstringfile`, and select it from the completion menu.
+
+Requires `#include <fstream>` and `#include <sstream>` at the top of your file.
+
+Place the cursor at file scope (outside any function) when expanding the snippet.
